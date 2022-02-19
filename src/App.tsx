@@ -11,7 +11,7 @@ import { AuthProvider } from "./shared/services/AuthProvider";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-shop-vite">
       <AuthProvider>
         <NavBar />
         <div className="container">
