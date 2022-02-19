@@ -1,11 +1,15 @@
 import React from "react";
 import Welcome from "../../shared/components/welcome/Welcome";
-import { SignupUser } from "../../shared/services/AuthProvider";
+import { SignupUser, useAuth } from "../../shared/services/AuthProvider";
 import SingUpForm from "./components/signupform/SignUpForm";
 import "./SignUp.css";
 
 const SignUp = () => {
-  const handleSignup = (user: SignupUser) => {};
+  const auth = useAuth();
+
+  const handleSignup = (user: SignupUser) => {
+    auth?.signup(user);
+  };
 
   return (
     <div>

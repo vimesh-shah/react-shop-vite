@@ -42,7 +42,7 @@ const SingUpForm = ({ onSignup, errorMessage }: SignUpFormProps) => {
       .required("Please enter age")
       .positive("Age must be positive number")
       .integer("Age must be integer number")
-      .min(18, "Age must be greater than 18")
+      .min(1, "Age must be greater than 1")
       .max(120, "Age must be less than 120"),
     gender: string().required("Please select gender"),
     email: string().required("Please enter email").email("Email is invalid"),
@@ -59,7 +59,7 @@ const SingUpForm = ({ onSignup, errorMessage }: SignUpFormProps) => {
     username: "",
     password: "",
     confirmPassword: "",
-    age: 18,
+    age: null,
     gender: "male",
     email: "",
     mobile: "",
@@ -195,7 +195,7 @@ const SingUpForm = ({ onSignup, errorMessage }: SignUpFormProps) => {
                   type="text"
                   id="age"
                   name="age"
-                  value={values.age}
+                  value={values.age ?? ""}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
@@ -266,7 +266,7 @@ const SingUpForm = ({ onSignup, errorMessage }: SignUpFormProps) => {
             </div>
             <div className="form-control">
               <button type="submit" disabled={isSubmitting}>
-                Login
+                Sign up
               </button>
             </div>
             <div className="form-control error">
