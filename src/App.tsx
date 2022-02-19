@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
@@ -12,7 +12,7 @@ import { AuthProvider } from "./shared/services/AuthProvider";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/react-shop-vite">
+    <HashRouter>
       <AuthProvider>
         <NavBar />
         <div className="container">
@@ -30,7 +30,7 @@ const App = () => {
           </Routes>
         </div>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
