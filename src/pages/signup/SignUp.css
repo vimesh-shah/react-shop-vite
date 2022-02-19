@@ -1,13 +1,13 @@
-.login-container {
+.signup-container {
   display: flex;
   width: 100%;
   gap: 50px;
 }
 
-.login-info {
+.signup-info {
   flex-grow: 1;
 }
 
-.login-form {
-  width: 400px;
+.signup-form {
+  width: 700px;
 }

@@ -1,20 +1,22 @@
 import { Formik } from "formik";
 import React from "react";
 import { object, string } from "yup";
-import { User } from "../../../../shared/services/AuthProvider";
+import NavLink from "../../../../shared/components/navlink/NavLink";
+import { LoginUser } from "../../../../shared/services/AuthProvider";
 import "./LoginForm.css";
 
 interface LoginFormProps {
-  onLogin: (user: User) => void;
+  onLogin: (user: LoginUser) => void;
+  errorMessage?: string;
 }
 
-const LoginForm = ({ onLogin }: LoginFormProps) => {
+const LoginForm = ({ onLogin, errorMessage }: LoginFormProps) => {
   const loginSchema = object({
     username: string().required("Please Enter Username."),
     password: string().required("Please Enter Password."),
   });
 
-  const intialValue: User = {
+  const intialValue: LoginUser = {
     username: "",
     password: "",
   };
@@ -84,6 +86,13 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
               <button type="submit" disabled={isSubmitting}>
                 Login
               </button>
+            </div>
+            <div className="form-control error">
+              {errorMessage && <span>{errorMessage}</span>}
+            </div>
+            <div className="form-control-signup">
+              Don't have an account? Sign up{" "}
+              <NavLink to="/signup">here</NavLink>.
             </div>
           </form>
         )}

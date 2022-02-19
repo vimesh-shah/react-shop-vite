@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
+import SignUp from "./pages/signup/SignUp";
 import Unauthorized from "./pages/unauthorized/Unauthorized";
 import NavBar from "./shared/components/navbar/NavBar";
 import RequireAuth from "./shared/components/RequireAuth";
@@ -24,6 +25,7 @@ const App = () => {
             </Route>
 
             <Route path="login" element={<Login />} />
+            <Route path="signup" element={<SignUp />} />
             <Route path="unauthorized" element={<Unauthorized />} />
           </Routes>
         </div>

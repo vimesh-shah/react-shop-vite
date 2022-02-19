@@ -33,6 +33,16 @@
   font-size: 20px;
 }
 
+.form-control select {
+  padding-left: 5px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
 .form-control input:focus {
   background-color: rgb(245, 245, 245);
 }
@@ -62,15 +72,6 @@
 
 .form-control button:focus {
   background-color: rgb(133, 85, 23);
-}
-
-.form-control-signup {
-  margin-top: 25px;
-  font-weight: bold;
-}
-
-.form-control-signup a {
-  text-decoration: none;
 }
 
 .form-control + .error {
