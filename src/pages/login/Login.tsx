@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import burgerImg from "../../assets/images/burger.jpg";
-import pizzaImg from "../../assets/images/pizza.jpg";
+import burgerImg from "../../images/burger.jpg";
+import pizzaImg from "../../images/pizza.jpg";
 import { useAuth, User } from "../../shared/services/AuthProvider";
 import LoginForm from "./components/loginform/LoginForm";
 import "./Login.css";
